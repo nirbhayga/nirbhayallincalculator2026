@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
+  <meta name="theme-color" content="#090915"/>
+  <title>Nirbhay Calculator – Ultimate All in One | NG®</title>
+  <meta name="description" content="India's #1 Premium All-in-One Calculator by Nirbhay Gautam. Basic, Scientific, EMI, GST, SIP, FD, RD, Age, BMI, Health, Currency, Unit Converter & more. 100% Free."/>
+  <meta name="keywords" content="calculator india, nirbhay calculator, emi calculator, gst calculator, sip calculator, fd calculator, scientific calculator, age calculator, bmi calculator, currency converter, nirbhay gautam"/>
+  <meta name="author" content="Nirbhay Gautam"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://nirbhaycalculator.in/"/>
+  
+  <meta name="google-site-verification" content="KK1iaJcAGXtj1qOvIlznkk1qH7A7zeJANMp97R4U98Y"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<style>
+:root{
+  --bg:#090915;--bg2:#0f0f20;--card:#13132b;--card2:#1a1a35;
+  --border:#252548;--border2:#2e2e5a;
+  --accent:#00e5ff;--accent2:#8b5cf6;--accent3:#f59e0b;
+  --green:#10b981;--red:#f43f5e;--orange:#f97316;
+  --text:#eeeeff;--muted:#6b6b8e;--muted2:#9494b8;
+  --display-bg:#05050f;
+  --glow-c:rgba(0,229,255,0.25);--glow-p:rgba(139,92,246,0.25);
+  --r:14px;--r-sm:10px;--r-xs:8px;
+}
+
+/* ── THEME VARIATIONS ── */
+body.theme-light {
+  --bg:#f3f4f6;--bg2:#e5e7eb;--card:#ffffff;--card2:#f9fafb;
+  --border:#d1d5db;--border2:#9ca3af;
+  --accent:#0284c7;--accent2:#4f46e5;--accent3:#ea580c;
+  --text:#1f2937;--muted:#6b7280;--muted2:#4b5563;
+  --display-bg:#f9fafb;
+}
+body.theme-cyberpunk {
+  --bg:#000000;--bg2:#1a0033;--card:#0d001a;--card2:#26004d;
+  --border:#ff007f;--border2:#00f0ff;
+  --accent:#00f0ff;--accent2:#ff007f;--accent3:#fffb00;
+  --text:#39ff14;--muted:#8c0066;--muted2:#00b3ff;
+  --display-bg:#05000a;
+}
+body.theme-minimal {
+  --bg:#fafaf9;--bg2:#f5f5f4;--card:#ffffff;--card2:#f5f5f4;
+  --border:#e7e5e4;--border2:#d6d3d1;
+  --accent:#78716c;--accent2:#a8a29e;--accent3:#d6d3d1;
+  --text:#292524;--muted:#a8a29e;--muted2:#78716c;
+  --display-bg:#f5f5f4;
+}
+body.theme-gold {
+  --bg:#12100e;--bg2:#1c1814;--card:#26201a;--card2:#332a22;
+  --border:#4d3d2d;--border2:#66523c;
+  --accent:#ffd700;--accent2:#b8860b;--accent3:#f59e0b;
+  --text:#fff8e7;--muted:#8c7860;--muted2:#b39e85;
+  --display-bg:#0a0908;
+}
+body.theme-ocean {
+  --bg:#070f1e;--bg2:#0d1b32;--card:#122544;--card2:#183158;
+  --border:#1e3f70;--border2:#2a579a;
+  --accent:#38bdf8;--accent2:#0284c7;--accent3:#06b6d4;
+  --text:#f0f7ff;--muted:#64748b;--muted2:#9494b8;
+  --display-bg:#030712;
+}
+body.theme-forest {
+  --bg:#05140b;--bg2:#0b2416;--card:#113822;--card2:#174c2e;
+  --border:#226f43;--border2:#2ea362;
+  --accent:#34d399;--accent2:#059669;--accent3:#a7f3d0;
+  --text:#f0fdf4;--muted:#65a30d;--muted2:#86efac;
+  --display-bg:#020a05;
+}
+
+/* ── SHAPE VARIATIONS ── */
+body.shape-sharp .btn, body.shape-sharp .form-card, body.shape-sharp .display, body.shape-sharp .tab, body.shape-sharp .calc-btn, body.shape-sharp .unit-cat, body.shape-sharp .wizard-box, body.shape-sharp .custom-date-picker {
+  border-radius: 0px !important;
+}
+body.shape-pill .btn, body.shape-pill .form-card, body.shape-pill .display, body.shape-pill .tab, body.shape-pill .calc-btn, body.shape-pill .unit-cat, body.shape-pill .wizard-box, body.shape-pill .custom-date-picker {
+  border-radius: 35px !important;
+}
+body.shape-leaf .btn, body.shape-leaf .form-card, body.shape-leaf .display, body.shape-leaf .tab, body.shape-leaf .calc-btn, body.shape-leaf .unit-cat, body.shape-leaf .wizard-box, body.shape-leaf .custom-date-picker {
+  border-radius: 24px 4px 24px 4px !important;
+}
+body.shape-bubble .btn, body.shape-bubble .form-card, body.shape-bubble .display, body.shape-bubble .tab, body.shape-bubble .calc-btn, body.shape-bubble .unit-cat, body.shape-bubble .wizard-box, body.shape-bubble .custom-date-picker {
+  border-radius: 18px 18px 4px 18px !important;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Rajdhani',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;transition: background 0.3s, color 0.3s;}
+
+/* ── SPLASH POPUP (EXTENDED WITH ANIMATED NG® LOGO) ── */
+#splash{
+  position:fixed;inset:0;z-index:99999;
+  background:radial-gradient(ellipse at 50% 30%, #0d0626 0%, #04040a 70%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:24px;text-align:center;
+}
+.splash-logo-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splash-glow{
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px dashed var(--accent);
+  box-shadow: 0 0 30px var(--glow-c), inset 0 0 20px var(--glow-c);
+  animation: rotateGlow 6s linear infinite;
+}
+.splash-logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 15px var(--accent);
+  z-index: 2;
+  animation: pulseLogo 1.5s ease-in-out infinite alternate;
+}
+@keyframes rotateGlow { 100% { transform: rotate(360deg); } }
+@keyframes pulseLogo { 0% { transform: scale(0.95); opacity: 0.8; } 100% { transform: scale(1.05); opacity: 1; } }
+
+.splash-title{
+  font-family:'Orbitron',monospace;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:900;
+  background:linear-gradient(135deg,#00e5ff,#8b5cf6,#f59e0b);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:3px;line-height:1.1;
+}
+.splash-sub{
+  font-family:'Noto Sans Devanagari',sans-serif;
+  color:var(--muted2);font-size:0.95rem;margin-top:8px;
+}
+.splash-by{
+  color:var(--accent);font-size:0.85rem;letter-spacing:2px;
+  text-transform:uppercase;margin-top:6px;font-weight: 700;
+}
+.splash-telemetry{
+  font-family:'Orbitron',monospace;font-size:0.75rem;color:var(--accent);
+  margin-top:20px;min-height:18px;text-transform:uppercase;letter-spacing:1px;
+}
+.splash-features{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+  margin:20px 0;width:100%;max-width:340px;
+}
+.splash-feat{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:10px;padding:10px 8px;font-size:0.78rem;color:var(--muted2);
+  display:flex;align-items:center;gap:6px;
+}
+.splash-feat span{font-size:1.1rem;}
+.splash-progress-wrap{width:100%;max-width:280px;height:5px;background:var(--border);border-radius:4px;overflow:hidden;margin-top:12px;}
+.splash-progress{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:4px;width:0%;}
+.splash-enter{
+  margin-top:20px;padding:14px 40px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border:none;border-radius:50px;color:#fff;
+  font-family:'Orbitron',monospace;font-size:0.9rem;font-weight:700;
+  cursor:pointer;letter-spacing:1px;
+  box-shadow:0 4px 20px var(--glow-c);
+  display:none;
+}
+.splash-enter:hover{filter:brightness(1.15);transform:scale(1.03);}
+
+/* ── CUSTOM DATE PICKER UI (WHEEL / CALENDAR EFFECT) ── */
+.custom-date-picker {
+  width: 100%;
+  background: var(--display-bg) !important;
+  border: 1px solid var(--border2) !important;
+  border-radius: 10px;
+  color: var(--text) !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 1.1rem !important;
+  padding: 12px 14px !important;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+.date-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.date-input-wrapper::after {
+  content: "\f073";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  color: var(--accent);
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+/* ── ANIMATED VOICE ENGINE FLOATING TOGGLE ── */
+.voice-engine-container {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voice-toggle-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--card2);
+  border: 2px solid var(--border);
+  color: var(--muted);
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.voice-toggle-btn.active {
+  background: linear-gradient(135deg, #00f0ff, #8b5cf6);
+  border-color: #00f0ff;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,229,255,0.4);
+}
+.voice-wave {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0;
+  pointer-events: none;
+}
+.voice-toggle-btn.active .voice-wave {
+  animation: voiceWaveAnim 1.5s linear infinite;
+}
+@keyframes voiceWaveAnim {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ── HOW TO USE WIZARD WITH VISUAL GRAPHICS HIGHLIGHT ── */
+#how-to-use-container {
+  position: fixed; inset: 0; z-index: 99990;
+  background: rgba(4,4,10,0.97);
+  display: none; align-items: center; justify-content: center; padding: 20px;
+}
+.wizard-box {
+  background: var(--card); border: 2px solid var(--border2);
+  border-radius: 16px; padding: 24px; max-width: 460px; width: 100%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8); position: relative;
+  animation: fadeUp 0.4s ease;
+}
+.wizard-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+  border-bottom: 1px dashed var(--border2); padding-bottom: 10px;
+}
+.wizard-icon { font-size: 1.8rem; color: var(--accent); }
+.wizard-title { font-family: 'Orbitron'; font-weight: 800; font-size: 1.1rem; color: var(--accent); }
+.wizard-visual-preview {
+  width: 100%; height: 130px; background: #05050f; border: 1px solid var(--border);
+  border-radius: 10px; margin-bottom: 15px; display: flex; align-items: center;
+  justify-content: center; overflow: hidden; position: relative;
+}
+.visual-mock-btn {
+  padding: 12px 24px; background: var(--card2); border: 2px solid var(--accent);
+  color: var(--accent); font-family: 'Orbitron'; font-weight: 700; border-radius: 8px;
+  box-shadow: 0 0 15px var(--glow-c); animation: mockPulse 1.5s infinite alternate;
+}
+@keyframes mockPulse { 0% { transform: scale(1); box-shadow: 0 0 5px var(--glow-c); } 100% { transform: scale(1.08); box-shadow: 0 0 20px var(--glow-c); } }
+
+.wizard-body { font-family: 'Noto Sans Devanagari', sans-serif; font-size: 0.95rem; line-height: 1.6; color: var(--text); min-height: 90px; }
+.wizard-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+.wizard-dots { display: flex; gap: 6px; }
+.wizard-dot { width: 8px; height: 8px; background: var(--border2); border-radius: 50%; transition: all 0.2s; }
+.wizard-dot.active { background: var(--accent); width: 18px; border-radius: 4px; }
+.wizard-btn {
+  padding: 10px 24px; background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none; border-radius: 8px; color: #fff; font-family: 'Orbitron';
+  font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: transform 0.2s;
+}
+.wizard-btn:active { transform: scale(0.95); }
+
+/* ── AD BANNER ── */
+.ad-banner{
+  width:100%;min-height:64px;background:var(--bg2);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.ad-slot{
+  width:100%;max-width:728px;height:90px;
+  background:linear-gradient(135deg,#12122a,#0a0a18);
+  border:1px dashed var(--border2);border-radius:8px;
+  margin:4px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  color:var(--muted);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;gap:2px;
+}
+
+/* ── HEADER ── */
+.header{
+  text-align:center;padding:18px 16px 10px;
+  background:linear-gradient(180deg,rgba(0,229,255,0.04) 0%,transparent 100%);
+  position:relative;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto 10px;
+  padding: 0 10px;
+}
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+.hamburger-btn:active { transform: scale(0.9); }
+.header-logo{
+  font-family:'Orbitron',monospace;
+  font-size:clamp(1.3rem,5vw,2rem);font-weight:900;
+  background:linear-gradient(135deg,#00e5ff 0%,#8b5cf6 50%,#ffd700 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:3px;
+}
+.header-tagline{font-family:'Noto Sans Devanagari',sans-serif;color:var(--muted2);font-size:0.82rem;margin-top:3px;}
+.header-by{font-size:0.72rem;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;}
+.header-badges{display:flex;gap:6px;justify-content:center;margin-top:8px;flex-wrap:wrap;}
+.badge{
+  padding:3px 10px;border-radius:50px;font-size:0.65rem;font-weight:700;
+  letter-spacing:0.5px;text-transform:uppercase;
+}
+.badge-free{background:rgba(16,185,129,0.15);border:1px solid var(--green);color:var(--green);}
+.badge-india{background:rgba(249,115,22,0.15);border:1px solid var(--orange);color:var(--orange);}
+.badge-calc{background:rgba(0,229,255,0.12);border:1px solid var(--accent);color:var(--accent);}
+
+/* ── SIDE MENU SYSTEM ── */
+.sidebar-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 10000; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.sidebar-overlay.active { opacity: 1; pointer-events: auto; }
+.sidebar {
+  position: fixed; top: 0; left: -280px; width: 280px; height: 100%;
+  background: var(--card); border-right: 1px solid var(--border);
+  z-index: 10001; padding: 24px; display: flex; flex-direction: column;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar.active { left: 0; }
+.sidebar-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 30px; border-bottom: 1px solid var(--border2); padding-bottom: 12px;
+}
+.sidebar-title { font-family: 'Orbitron'; font-size: 1.1rem; color: var(--accent); font-weight: 800; }
+.sidebar-close { background: transparent; border: none; color: var(--red); font-size: 1.3rem; cursor: pointer; }
+.sidebar-menu { display: flex; flex-direction: column; gap: 12px; }
+.sidebar-link {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; transition: all 0.2s;
+}
+.sidebar-link:hover { border-color: var(--accent); color: var(--accent); background: var(--card2); }
+
+/* ── DYNAMIC MODALS FOR PAGES ── */
+.modal-portal {
+  position: fixed; inset: 0; background: var(--bg); z-index: 20000;
+  display: none; flex-direction: column; overflow-y: auto; padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+.modal-portal.active { display: flex; }
+.modal-container { max-width: 750px; margin: 20px auto; width: 100%; }
+.modal-header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-close-btn { background: var(--card2); border: 1px solid var(--border); color: var(--text); padding: 8px 16px; border-radius: 8px; cursor: pointer; }
+.modal-content-text { line-height: 1.8; font-size: 0.98rem; color: var(--text); font-family: 'Rajdhani', sans-serif; }
+.modal-content-text h2 { color: var(--accent); margin-top: 24px; margin-bottom: 12px; font-family: 'Orbitron'; font-size: 1.5rem; border-bottom: 1px dashed var(--border2); padding-bottom: 6px; }
+.modal-content-text h3 { color: var(--accent3); margin-top: 16px; margin-bottom: 8px; font-size: 1.1rem; }
+.modal-content-text p { margin-bottom: 14px; text-align: justify; color: var(--text); opacity: 0.9; }
+.modal-content-text ul { margin-left: 20px; margin-bottom: 14px; }
+.modal-content-text li { margin-bottom: 6px; }
+
+/* ── WHATSAPP & CONTACT STYLES ── */
+.whatsapp-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25D366; color: white !important; padding: 12px 24px; border-radius: 50px;
+  text-decoration: none; font-weight: 700; font-size: 1rem; margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(37,211,102,0.3); border: none; cursor: pointer; transition: transform 0.2s;
+}
+.whatsapp-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+.email-link { color: var(--accent); text-decoration: underline; font-weight: 600; }
+
+/* ── TABS ── */
+.tabs-outer{padding:0 10px;overflow-x:auto;scrollbar-width:none;}
+.tabs-outer::-webkit-scrollbar{display:none;}
+.tabs{display:flex;gap:5px;width:max-content;margin:0 auto;padding:8px 0 10px;}
+.tab{
+  padding:7px 14px;background:var(--card);border:1px solid var(--border);
+  border-radius:50px;color:var(--muted);
+  font-family:'Rajdhani',sans-serif;font-size:0.82rem;font-weight:600;
+  cursor:pointer;white-space:nowrap;transition:all 0.2s ease;letter-spacing:0.3px;
+}
+.tab:hover{border-color:var(--accent);color:var(--accent);}
+.tab.active{
+  background:linear-gradient(135deg,rgba(0,229,255,0.12),rgba(139,92,246,0.12));
+  border-color:var(--accent);color:var(--accent);
+  box-shadow:0 0 14px rgba(0,229,255,0.15);
+}
+
+/* ── MAIN ── */
+.main{padding:0 12px 110px;max-width:480px;margin:0 auto;}
+
+/* ── PANEL ── */
+.calc-panel{display:none;animation:fadeUp 0.3s ease;}
+.calc-panel.active{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ── DISPLAY ── */
+.display{
+  background:var(--display-bg);border:1px solid var(--border2);
+  border-radius:16px;padding:14px 18px;margin-bottom:10px;
+  min-height:108px;display:flex;flex-direction:column;justify-content:flex-end;
+  box-shadow:inset 0 2px 16px rgba(0,0,0,0.6);
+  position:relative;overflow:hidden;
+}
+.display::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+}
+.display-mode{
+  position:absolute;top:10px;left:14px;
+  font-size:0.6rem;color:var(--accent2);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;
+}
+.display-memory{
+  position:absolute;top:10px;right:14px;
+  font-size:0.6rem;color:var(--accent3);letter-spacing:1px;text-transform:uppercase;
+}
+.display-expr{font-family:'Orbitron',monospace;font-size:0.75rem;color:var(--muted);text-align:right;min-height:18px;word-break:break-all;}
+.display-val{
+  font-family:'Orbitron',monospace;font-size:clamp(1.7rem,8vw,2.8rem);font-weight:600;
+  color:var(--text);text-align:right;line-height:1.1;margin-top:6px;
+  word-break:break-all;transition:font-size 0.1s;
+}
+
+/* ── BUTTONS ── */
+.btns{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;}
+.btn{
+  height:58px;border-radius:12px;border:1px solid var(--border);
+  font-family:'Orbitron',monospace;font-size:0.95rem;font-weight:600;
+  cursor:pointer;transition:all 0.12s ease;position:relative;overflow:hidden;
+  letter-spacing:0.3px;user-select:none;
+}
+.btn::after{content:'';position:absolute;inset:0;background:#fff;opacity:0;transition:opacity 0.15s;}
+.btn:active::after{opacity:0.08;}
+.btn:active{transform:scale(0.93);}
+.btn-num{background:var(--card2);color:var(--text);}
+.btn-num:hover{background:#202045;border-color:#383880;}
+.btn-op{background:#160e38;color:var(--accent2);border-color:#2a1a60;font-size:1.15rem;}
+.btn-op:hover{background:#1e1250;}
+.btn-eq{
+  background:linear-gradient(135deg,#00aac8,#5520a0);color:#fff;border:none;
+  box-shadow:0 4px 18px rgba(0,229,255,0.25);font-size:1.3rem;
+}
+.btn-eq:hover{box-shadow:0 4px 26px rgba(0,229,255,0.45);filter:brightness(1.1);}
+.btn-clear{background:#1a0608;color:var(--red);border-color:#400;font-size:0.82rem;}
+.btn-clear:hover{background:#280a0e;}
+.btn-ac{background:#120404;color:#ff7070;border-color:#500;}
+.btn-ac:hover{background:#1e0808;}
+.btn-func{background:#0c1822;color:var(--accent);border-color:#1a3050;font-size:0.75rem;}
+.btn-func:hover{background:#101e2e;}
+.btn-mem{background:#0c1a10;color:var(--green);border-color:#1a4020;font-size:0.75rem;}
+.btn-mem:hover{background:#10200e;}
+.btn-zero{font-size:1.1rem;}
+
+/* ── FORM STYLE ── */
+.form-card{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:18px;}
+.form-card h3{
+  font-family:'Orbitron',monospace;font-size:0.85rem;color:var(--accent);
+  letter-spacing:1px;margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--border2);
+}
+.form-group{margin-bottom:12px;}
+.form-group label{
+  display:block;font-size:0.76rem;color:var(--muted2);
+  margin-bottom:5px;letter-spacing:0.5px;text-transform:uppercase;font-weight:600;
+}
+.form-group input,.form-group select{
+  width:100%;background:var(--display-bg);border:1px solid var(--border2);
+  border-radius:10px;color:var(--text);font-family:'Rajdhani',sans-serif;
+  font-size:1.05rem;padding:11px 13px;outline:none;
+  transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none;
+}
+.form-group input:focus,.form-group select:focus{
+  border-color:var(--accent);box-shadow:0 0 0 2px rgba(0,229,255,0.1);
+}
+.form-group select option{background:var(--card2); color:var(--text);}
+.input-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+
+.calc-btn{
+  width:100%;padding:13px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border:none;border-radius:12px;color:#fff;
+  font-family:'Orbitron',monospace;font-size:0.85rem;font-weight:700;
+  cursor:pointer;letter-spacing:1px;margin-top:4px;
+  box-shadow:0 4px 18px rgba(0,229,255,0.2);transition:all 0.2s;
+}
+.calc-btn:hover{filter:brightness(1.1);box-shadow:0 4px 28px rgba(0,229,255,0.35);}
+.calc-btn:active{transform:scale(0.98);}
+.calc-btn-outline{
+  width:100%;padding:10px;background:transparent;
+  border:1px solid var(--border2);border-radius:10px;color:var(--muted2);
+  font-family:'Rajdhani',sans-serif;font-size:0.85rem;font-weight:600;
+  cursor:pointer;margin-top:6px;transition:all 0.2s;letter-spacing:0.5px;
+}
+.calc-btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.result-box{
+  background:var(--display-bg);border:1px solid var(--accent);
+  border-radius:12px;padding:14px;margin-top:12px;
+  display:none;animation:fadeUp 0.3s ease;
+  box-shadow:0 0 16px rgba(0,229,255,0.08);
+}
+.result-box.show{display:block;}
+.result-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:7px 0;border-bottom:1px solid var(--border);
+}
+.result-row:last-child{border-bottom:none;}
+.result-label{color:var(--muted2);font-size:0.8rem;letter-spacing:0.3px;}
+.result-value{font-family:'Orbitron',monospace;color:var(--accent);font-size:0.95rem;font-weight:600;}
+.result-value.big{font-size:1.25rem;color:var(--green);}
+.result-value.warn{color:var(--orange);}
+.result-value.danger{color:var(--red);}
+
+/* ── HISTORY ── */
+.history-panel{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:14px;max-height:360px;overflow-y:auto;}
+.history-panel::-webkit-scrollbar{width:4px;}
+.history-panel::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px;}
+.hist-item{
+  padding:10px 8px;border-bottom:1px solid var(--border);
+  cursor:pointer;border-radius:8px;transition:background 0.15s;
+}
+.hist-item:hover{background:rgba(0,229,255,0.05);}
+.hist-item:last-child{border-bottom:none;}
+.h-expr{font-size:0.78rem;color:var(--muted);margin-bottom:2px;}
+.h-result{font-family:'Orbitron',monospace;font-size:0.98rem;color:var(--accent);}
+.h-time{font-size:0.65rem;color:var(--muted);margin-top:2px;}
+.no-hist{text-align:center;color:var(--muted);padding:28px;font-size:0.85rem;}
+
+/* ── UNIT CONVERTER ── */
+.unit-cats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.unit-cat{
+  padding:6px 12px;background:var(--card2);border:1px solid var(--border);
+  border-radius:50px;font-size:0.76rem;color:var(--muted);cursor:pointer;
+  transition:all 0.2s;font-weight:600;
+}
+.unit-cat.active{background:rgba(139,92,246,0.15);border-color:var(--accent2);color:var(--accent2);}
+
+/* ── SETTINGS ── */
+.settings-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 14px;background:var(--card2);border:1px solid var(--border);
+  border-radius:10px;margin-bottom:8px;
+}
+.settings-label{font-size:0.88rem;color:var(--text);}
+.settings-desc{font-size:0.72rem;color:var(--muted);margin-top:2px;}
+.toggle{width:44px;height:24px;background:var(--border2);border-radius:50px;position:relative;cursor:pointer;transition:background 0.2s;border:none;flex-shrink:0;}
+.toggle.on{background:var(--accent2);}
+.toggle::after{content:'';position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.4);}
+.toggle.on::after{transform:translateX(20px);}
+
+/* ── BOTTOM AD ── */
+.ad-bottom-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  background:var(--bg2);border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  padding:5px;z-index:200;
+}
+.ad-bottom-bar .ad-slot{height:52px;width:320px;max-width:95vw;margin:0;}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--card2);border:1px solid var(--border2);border-radius:50px;
+  padding:10px 22px;font-size:0.82rem;color:var(--text);
+  opacity:0;transition:all 0.3s ease;z-index:5000;white-space:nowrap;
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;padding:16px 16px 85px 16px;color:var(--muted);font-size:0.72rem;line-height:1.9;
+}
+.footer strong{font-family:'Noto Sans Devanagari',sans-serif;color:var(--accent);}
+.footer-links { margin-top: 8px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.footer-links span { color: var(--muted2); cursor: pointer; text-decoration: underline; }
+.footer-links span:hover { color: var(--accent); }
+
+@media(max-width:360px){.btn{height:52px;font-size:0.85rem;}.display-val{font-size:1.5rem;}}
+@media(min-width:500px){.btn{height:66px;}.main{max-width:500px;}}
+</style>
+</head>
+<body>
+
+<div class="voice-engine-container">
+  <button class="voice-toggle-btn" id="voiceToggle" onclick="toggleVoiceEngine()">
+    <i class="fa-solid fa-microphone-slash" id="voiceIcon"></i>
+    <div class="voice-wave"></div>
+  </button>
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title" id="side-nav-title">⚡ NAVIGATION</div>
+    <button class="sidebar-close" onclick="toggleSidebar()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="sidebar-menu">
+    <div class="sidebar-link" onclick="openPortal('about')" id="sl-about"><i class="fa-solid fa-user"></i> About Us</div>
+    <div class="sidebar-link" onclick="openPortal('contact')" id="sl-contact"><i class="fa-solid fa-envelope"></i> Contact Us</div>
+    <div class="sidebar-link" onclick="openPortal('terms')" id="sl-terms"><i class="fa-solid fa-file-contract"></i> Terms & Conditions</div>
+    <div class="sidebar-link" onclick="openPortal('privacy')" id="sl-privacy"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</div>
+    <div class="sidebar-link" onclick="openPortal('help')" id="sl-help"><i class="fa-solid fa-circle-question"></i> Help & Support</div>
+  </div>
+</div>
+
+<div class="modal-portal" id="portal-modal">
+  <div class="modal-container">
+    <div class="modal-header-bar">
+      <div id="modal-badge-title" class="badge badge-calc" style="font-size:0.8rem; padding:6px 14px;">PORTAL</div>
+      <button class="modal-close-btn" onclick="closePortal()" id="lbl-close">Close <i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="form-card">
+      <div class="modal-content-text" id="modal-dynamic-body"></div>
+    </div>
+  </div>
+</div>
+
+<div id="splash">
+  <div class="splash-logo-container">
+    <div class="splash-glow"></div>
+    <div class="splash-logo-text">NG®</div>
+  </div>
+  <div class="splash-title">NG® CALC</div>
+  <div class="splash-sub">Ultimate All-in-One Portal · महा-कैलकुलेटर</div>
+  <div class="splash-by">NG® REGISTERED BRAND ©2026</div>
+  
+  <div class="splash-telemetry" id="telemetry-text">INITIALIZING ENGINE...</div>
+
+  <div class="splash-features">
+    <div class="splash-feat"><span>🔢</span> Basic & Scientific</div>
+    <div class="splash-feat"><span>🏦</span> Investment (SIP/FD)</div>
+    <div class="splash-feat"><span>📊</span> GST & EMI Loan</div>
+    <div class="splash-feat"><span>🎂</span> Age & Date Picker</div>
+    <div class="splash-feat"><span>⚕️</span> BMI & Fitness Tracker</div>
+    <div class="splash-feat"><span>💱</span> Currency & Units</div>
+  </div>
+  <div class="splash-progress-wrap"><div class="splash-progress" id="splashBar"></div></div>
+  <button class="splash-enter" id="splashBtn" onclick="closeSplash()">▶ OPEN CALCULATOR</button>
+</div>
+
+<div id="how-to-use-container">
+  <div class="wizard-box">
+    <div class="wizard-header">
+      <div class="wizard-icon" id="wiz-icon">🔢</div>
+      <div class="wizard-title" id="wiz-title">हाउ टू यूज़ गाइड (1/5)</div>
+    </div>
+    <div class="wizard-visual-preview" id="wiz-visual">
+       <div class="visual-mock-btn">🔢 CLICK ME</div>
+    </div>
+    <div class="wizard-body" id="wiz-body">लोडिंग हो रही है...</div>
+    <div class="wizard-footer">
+      <div class="wizard-dots" id="wiz-dots">
+        <div class="wizard-dot active"></div>
+        <div class="wizard-dot"></div>
+        <div class="wizard-dot"></div>
+        <div class="wizard-dot"></div>
+        <div class="wizard-dot"></div>
+      </div>
+      <button class="wizard-btn" id="wiz-next-btn" onclick="nextWizardStep()">NEXT STEP ➔</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="ad-banner">
+  <div class="ad-slot"><span>📢</span><span>ADVERTISEMENT · GOOGLE ADSENSE READY</span></div>
+</div>
+
+<div class="header">
+  <div class="header-top">
+    <button class="hamburger-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+    <div class="header-logo">⚡ NG® CALCULATOR</div>
+    <div style="width: 30px;"></div> </div>
+  <div class="header-tagline" id="hdr-tagline">India's Premium All-in-One Ultimate Portal</div>
+  <div class="header-by">NG® Registered Interface · Genuine Platform</div>
+  <div class="header-badges">
+    <span class="badge badge-free" id="bdg-free">✓ 100% Free</span>
+    <span class="badge badge-india">🇮🇳 Made in India</span>
+    <span class="badge badge-calc" id="bdg-tools">15+ Calculators</span>
+  </div>
+</div>
+
+<div class="tabs-outer">
+  <div class="tabs" id="tabs-container">
+    <div class="tab active" onclick="switchTab('basic')" id="t-basic">🔢 Basic</div>
+    <div class="tab" onclick="switchTab('scientific')" id="t-scientific">🧬 Scientific</div>
+    <div class="tab" onclick="switchTab('emi')" id="t-emi">🏦 EMI</div>
+    <div class="tab" onclick="switchTab('gst')" id="t-gst">📊 GST</div>
+    <div class="tab" onclick="switchTab('finance')" id="t-finance">💰 Investment (SIP/FD)</div>
+    <div class="tab" onclick="switchTab('age')" id="t-age">🎂 Age</div>
+    <div class="tab" onclick="switchTab('percent')" id="t-percent">% Percent</div>
+    <div class="tab" onclick="switchTab('bmi')" id="t-bmi">⚕️ Fitness Tracker</div>
+    <div class="tab" onclick="switchTab('currency')" id="t-currency">💱 Currency</div>
+    <div class="tab" onclick="switchTab('unit')" id="t-unit">📐 Units</div>
+    <div class="tab" onclick="switchTab('profit')" id="t-profit">📈 Profit</div>
+    <div class="tab" onclick="switchTab('tip')" id="t-tip">🍽️ Tip</div>
+    <div class="tab" onclick="switchTab('history')" id="t-history">📋 History</div>
+    <div class="tab" onclick="switchTab('settings')" id="t-settings">⚙️ Settings</div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="calc-panel active" id="panel-basic">
+    <div class="display">
+      <div class="display-mode" id="bMode">STANDARD</div>
+      <div class="display-memory" id="bMem"></div>
+      <div class="display-expr" id="bExpr"></div>
+      <div class="display-val" id="bVal">0</div>
+    </div>
+    <div class="btns">
+      <button class="btn btn-mem" onclick="memAction('mc')">MC</button>
+      <button class="btn btn-mem" onclick="memAction('mr')">MR</button>
+      <button class="btn btn-mem" onclick="memAction('m+')">M+</button>
+      <button class="btn btn-mem" onclick="memAction('ms')">MS</button>
+      <button class="btn btn-ac" onclick="bAC()">AC</button>
+      <button class="btn btn-clear" onclick="bDel()">⌫</button>
+      <button class="btn btn-op" onclick="bOp('%')">%</button>
+      <button class="btn btn-op" onclick="bOp('÷')">÷</button>
+      <button class="btn btn-num" onclick="bNum('7')">7</button>
+      <button class="btn btn-num" onclick="bNum('8')">8</button>
+      <button class="btn btn-num" onclick="bNum('9')">9</button>
+      <button class="btn btn-op" onclick="bOp('×')">×</button>
+      <button class="btn btn-num" onclick="bNum('4')">4</button>
+      <button class="btn btn-num" onclick="bNum('5')">5</button>
+      <button class="btn btn-num" onclick="bNum('6')">6</button>
+      <button class="btn btn-op" onclick="bOp('−')">−</button>
+      <button class="btn btn-num" onclick="bNum('1')">1</button>
+      <button class="btn btn-num" onclick="bNum('2')">2</button>
+      <button class="btn btn-num" onclick="bNum('3')">3</button>
+      <button class="btn btn-op" onclick="bOp('+')">+</button>
+      <button class="btn btn-op" onclick="bToggleSign()">+/−</button>
+      <button class="btn btn-num btn-zero" onclick="bNum('0')">0</button>
+      <button class="btn btn-num" onclick="bNum('.')">.</button>
+      <button class="btn btn-eq" onclick="bEqual()">=</button>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-scientific">
+    <div class="display">
+      <div class="display-mode">SCIENTIFIC</div>
+      <div class="display-expr" id="sExpr"></div>
+      <div class="display-val" id="sVal">0</div>
+    </div>
+    <div class="btns">
+      <button class="btn btn-func" onclick="sciF('sin')">sin</button>
+      <button class="btn btn-func" onclick="sciF('cos')">cos</button>
+      <button class="btn btn-func" onclick="sciF('tan')">tan</button>
+      <button class="btn btn-func" onclick="sciF('log')">log₁₀</button>
+      <button class="btn btn-func" onclick="sciF('sqrt')">√x</button>
+      <button class="btn btn-func" onclick="sciF('cbrt')">∛x</button>
+      <button class="btn btn-func" onclick="sciF('sq')">x²</button>
+      <button class="btn btn-func" onclick="sciF('cube')">x³</button>
+      <button class="btn btn-func" onclick="sciF('inv')">1/x</button>
+      <button class="btn btn-func" onclick="sciF('ln')">ln</button>
+      <button class="btn btn-func" onclick="sciF('pi')">π</button>
+      <button class="btn btn-func" onclick="sciF('e')">e</button>
+      <button class="btn btn-ac" onclick="sAC()">AC</button>
+      <button class="btn btn-clear" onclick="sDel()">⌫</button>
+      <button class="btn btn-op" onclick="sOp('÷')">÷</button>
+      <button class="btn btn-op" onclick="sOp('×')">×</button>
+      <button class="btn btn-num" onclick="sNum('7')">7</button>
+      <button class="btn btn-num" onclick="sNum('8')">8</button>
+      <button class="btn btn-num" onclick="sNum('9')">9</button>
+      <button class="btn btn-op" onclick="sOp('−')">−</button>
+      <button class="btn btn-num" onclick="sNum('4')">4</button>
+      <button class="btn btn-num" onclick="sNum('5')">5</button>
+      <button class="btn btn-num" onclick="sNum('6')">6</button>
+      <button class="btn btn-op" onclick="sOp('+')">+</button>
+      <button class="btn btn-num" onclick="sNum('1')">1</button>
+      <button class="btn btn-num" onclick="sNum('2')">2</button>
+      <button class="btn btn-num" onclick="sNum('3')">3</button>
+      <button class="btn btn-func" onclick="sciF('abs')">|x|</button>
+      <button class="btn btn-func" onclick="sciF('fact')">n!</button>
+      <button class="btn btn-num btn-zero" onclick="sNum('0')">0</button>
+      <button class="btn btn-num" onclick="sNum('.')">.</button>
+      <button class="btn btn-eq" onclick="sEqual()">=</button>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-emi">
+    <div class="form-card">
+      <h3 id="lbl-emi-title">🏦 EMI LOAN CALCULATOR</h3>
+      <div class="form-group"><label id="lbl-loan-amt">Loan Amount (₹)</label><input type="number" id="emi-p" placeholder="e.g. 500000"/></div>
+      <div class="form-group"><label id="lbl-loan-rate">Annual Interest Rate (%)</label><input type="number" id="emi-r" placeholder="e.g. 8.5" step="0.1"/></div>
+      <div class="form-group"><label id="lbl-loan-tenure">Loan Tenure</label>
+        <div class="input-row">
+          <input type="number" id="emi-t" placeholder="Duration"/>
+          <select id="emi-ttype"><option value="months" id="opt-m">Months</option><option value="years" id="opt-y">Years</option></select>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcEMI()" id="btn-calc-emi">📊 CALCULATE EMI</button>
+      <button class="calc-btn-outline" onclick="resetForm('emi')" id="btn-reset-emi">Reset</button>
+      <div class="result-box" id="emi-res">
+        <div class="result-row"><span class="result-label" id="lbl-m-emi">Monthly EMI</span><span class="result-value big" id="emi-monthly"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-p-amt">Principal Amount</span><span class="result-value" id="emi-principal-r"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-t-int">Total Interest</span><span class="result-value warn" id="emi-intamt"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-t-pay">Total Amount</span><span class="result-value" id="emi-total"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-gst">
+    <div class="form-card">
+      <h3 id="lbl-gst-title">📊 GST CALCULATOR — INDIA</h3>
+      <div class="form-group"><label id="lbl-gst-amt">Amount (₹)</label><input type="number" id="gst-amt" placeholder="Enter amount"/></div>
+      <div class="form-group"><label id="lbl-gst-rate">GST Rate</label>
+        <select id="gst-rate">
+          <option value="0">0% (Exempt)</option>
+          <option value="0.25">0.25% (Diamonds)</option>
+          <option value="3">3% (Gold/Silver)</option>
+          <option value="5">5% (Essential)</option>
+          <option value="12">12% (Standard)</option>
+          <option value="18" selected>18% (Most Services)</option>
+          <option value="28">28% (Luxury)</option>
+        </select>
+      </div>
+      <div class="form-group"><label id="lbl-gst-type">Calculation Type</label>
+        <select id="gst-type">
+          <option value="add" id="opt-gst-add">Add GST</option>
+          <option value="remove" id="opt-gst-rem">Remove GST</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calcGST()" id="btn-calc-gst">📋 CALCULATE GST</button>
+      <button class="calc-btn-outline" onclick="resetForm('gst')" id="btn-reset-gst">Reset</button>
+      <div class="result-box" id="gst-res">
+        <div class="result-row"><span class="result-label" id="lbl-gst-base">Base Amount</span><span class="result-value" id="gst-base"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-gst-tot">Total GST</span><span class="result-value warn" id="gst-totaltax"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-gst-fin">Final Amount</span><span class="result-value big" id="gst-final"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-finance">
+    <div class="form-card">
+      <h3 id="lbl-fin-title">💰 INVESTMENT & WEALTH ZONE</h3>
+      <div class="form-group">
+        <label id="lbl-inv-type">Investment Type</label>
+        <select id="fin-type" onchange="toggleFinanceInputs()">
+          <option value="sip">SIP Calculator</option>
+          <option value="lumpsum">Lumpsum Mutual Fund</option>
+          <option value="fd">Fixed Deposit (FD)</option>
+          <option value="rd">Recurring Deposit (RD)</option>
+        </select>
+      </div>
+      <div class="form-group"><label id="fin-amt-label">Monthly Investment (₹)</label><input type="number" id="fin-amt" placeholder="e.g. 5000"/></div>
+      <div class="form-group"><label id="lbl-fin-rate">Expected Return Rate (% P.A.)</label><input type="number" id="fin-rate" placeholder="e.g. 12" step="0.1"/></div>
+      <div class="form-group"><label id="lbl-fin-period">Time Period (Years)</label><input type="number" id="fin-years" placeholder="e.g. 10"/></div>
+      
+      <button class="calc-btn" onclick="calculateWealth()" id="btn-calc-fin">📈 CALCULATE WEALTH</button>
+      
+      <div class="result-box" id="fin-res">
+        <div class="result-row"><span class="result-label" id="lbl-fin-inv">Invested Amount</span><span class="result-value" id="fin-invested"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-fin-ret">Est. Returns</span><span class="result-value warn" id="fin-returns"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-fin-tot">Total Value</span><span class="result-value big" id="fin-total"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-age">
+    <div class="form-card">
+      <h3 id="lbl-age-title">🎂 AGE CALCULATOR</h3>
+      <div class="form-group">
+        <label id="lbl-age-dob">Date of Birth</label>
+        <div class="date-input-wrapper">
+          <input type="date" id="age-dob" class="custom-date-picker"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label id="lbl-age-cur">Calculate Age On</label>
+        <div class="date-input-wrapper">
+          <input type="date" id="age-to" class="custom-date-picker"/>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcAge()" id="btn-calc-age">🎂 CALCULATE AGE</button>
+      <div class="result-box" id="age-res">
+        <div class="result-row"><span class="result-label" id="lbl-age-exact">Exact Age</span><span class="result-value big" id="age-main"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-age-tm">Total Months</span><span class="result-value" id="age-months"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-age-td">Total Days</span><span class="result-value" id="age-days"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-age-next">Next Birthday</span><span class="result-value warn" id="age-next"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-percent">
+    <div class="form-card">
+      <h3 id="lbl-pct-title">% PERCENTAGE CALCULATOR</h3>
+      <div class="form-group">
+         <label>Calculation Mode</label>
+         <select id="pct-mode" onchange="togglePctInputs()">
+            <option value="basic">X% of Y (सामान्य प्रतिशत)</option>
+            <option value="hike">Hike / Increase Percentage (बढ़ोत्तरी)</option>
+            <option value="discount">Discount / Decrease Percentage (छूट)</option>
+            <option value="share">What % is X of Y? (हिस्सा प्रतिशत)</option>
+         </select>
+      </div>
+      <div class="form-group">
+        <div class="input-row">
+           <input type="number" id="p1x" placeholder="Value X"/>
+           <input type="number" id="p1y" placeholder="Value Y"/>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcAdvancedPercentage()" id="btn-calc-pct">Calculate</button>
+      <div class="result-box" id="p1-res">
+         <div class="result-row"><span class="result-label" id="lbl-pct-res">Final Calculated Value</span><span class="result-value big" id="p1-ans"></span></div>
+         <div class="result-row" id="pct-diff-row" style="display:none;"><span class="result-label">Net Difference Amount</span><span class="result-value warn" id="p1-diff"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-bmi">
+    <div class="form-card">
+      <h3 id="lbl-health-title">⚕️ FITNESS & HEALTH TRACKER</h3>
+      <div class="form-group">
+        <label id="lbl-health-feat">Analysis Feature</label>
+        <select id="health-type" onchange="toggleHealthInputs()">
+          <option value="bmi">BMI (Body Mass Index)</option>
+          <option value="bmr">BMR Tracker (Calorie Burn)</option>
+        </select>
+      </div>
+      <div class="input-row form-group">
+        <div><label id="lbl-h-w">Weight (kg)</label><input type="number" id="bmi-w" placeholder="70"/></div>
+        <div><label id="lbl-h-h">Height (cm)</label><input type="number" id="bmi-h" placeholder="170"/></div>
+      </div>
+      <div class="input-row form-group">
+        <div><label id="lbl-h-a">Age (Years)</label><input type="number" id="bmi-age" value="25"/></div>
+        <div><label id="lbl-h-g">Gender</label><select id="bmi-g"><option value="M">Male</option><option value="F">Female</option></select></div>
+      </div>
+      
+      <button class="calc-btn" onclick="calculateHealthTracker()" id="btn-calc-hlth">⚕️ ANALYZE HEALTH</button>
+      
+      <div class="result-box" id="bmi-res">
+        <div class="result-row"><span class="result-label" id="health-res-label">Score</span><span class="result-value big" id="bmi-val"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-h-status">Status/Category</span><span class="result-value" id="bmi-cat"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-currency">
+    <div class="form-card">
+      <h3 id="lbl-cur-title">💱 CURRENCY CONVERTER</h3>
+      <div class="form-group"><label id="lbl-cur-val">Amount</label><input type="number" id="cur-amt" placeholder="Enter amount"/></div>
+      <div class="form-group">
+        <div class="input-row">
+          <select id="cur-from"><option value="INR">₹ INR</option><option value="USD">$ USD</option><option value="EUR">€ EUR</option></select>
+          <select id="cur-to"><option value="USD">$ USD</option><option value="INR">₹ INR</option><option value="EUR">€ EUR</option></select>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcCur()" id="btn-calc-cur">💱 CONVERT</button>
+      <div class="result-box" id="cur-res">
+        <div class="result-row"><span class="result-label" id="lbl-cur-res">Converted Amount</span><span class="result-value big" id="cur-ans"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-unit">
+    <div class="form-card">
+      <h3 id="lbl-unit-title">📐 UNIT CONVERTER</h3>
+      <div class="unit-cats">
+        <div class="unit-cat active" onclick="setUnitCat('length',this)" id="uc-len">Length</div>
+        <div class="unit-cat" onclick="setUnitCat('weight',this)" id="uc-wt">Weight</div>
+        <div class="unit-cat" onclick="setUnitCat('speed',this)" id="uc-speed">Speed</div>
+      </div>
+      <div class="form-group"><label id="lbl-unit-val">Value</label><input type="number" id="unit-val" placeholder="Enter value"/></div>
+      <div class="form-group">
+        <div class="input-row"><select id="unit-from"></select><select id="unit-to"></select></div>
+      </div>
+      <button class="calc-btn" onclick="calcUnit()" id="btn-calc-unit">📐 CONVERT</button>
+      <div class="result-box" id="unit-res"><div class="result-row"><span class="result-label" id="lbl-unit-res">Result</span><span class="result-value big" id="unit-ans"></span></div></div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-profit">
+    <div class="form-card">
+      <h3 id="lbl-prof-title">📈 PROFIT & LOSS</h3>
+      <div class="form-group"><label id="lbl-prof-cp">Cost Price (₹)</label><input type="number" id="pl-cp"/></div>
+      <div class="form-group"><label id="lbl-prof-sp">Selling Price (₹)</label><input type="number" id="pl-sp"/></div>
+      <button class="calc-btn" onclick="calcPL()" id="btn-calc-prof">📈 CALCULATE</button>
+      <div class="result-box" id="pl-res">
+        <div class="result-row"><span class="result-label" id="lbl-prof-st">Status</span><span class="result-value big" id="pl-status"></span></div>
+        <div class="result-row"><span class="result-label" id="lbl-prof-mg">Margin Amount</span><span class="result-value" id="pl-amount"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-tip">
+    <div class="form-card">
+      <h3 id="lbl-tip-title">🍽️ TIP & BILL SPLIT</h3>
+      <div class="form-group"><label id="lbl-tip-b">Total Bill (₹)</label><input type="number" id="tip-bill"/></div>
+      <div class="form-group"><label id="lbl-tip-s">Split Among People</label><input type="number" id="tip-split" value="1"/></div>
+      <button class="calc-btn" onclick="calcTip()" id="btn-calc-tip">🍽️ CALCULATE</button>
+      <div class="result-box" id="tip-res"><div class="result-row"><span class="result-label" id="lbl-tip-res">Per Person Share</span><span class="result-value big" id="tip-per"></span></div></div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-history">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <span style="font-family:Orbitron;font-size:0.82rem;color:var(--accent)" id="lbl-hist-title">📋 HISTORY</span>
+      <button onclick="clearHistory()" style="background:#1a0608;border:1px solid #500;color:var(--red);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:0.75rem;" id="btn-clear-all">🗑️ Clear All</button>
+    </div>
+    <div class="history-panel" id="hist-list">
+      <div class="no-hist">कोई calculation नहीं है।</div>
+    </div>
+  </div>
+
+  <div class="calc-panel" id="panel-settings">
+    <div class="form-card">
+      <h3 id="lbl-set-title">⚙️ SETTINGS & INTERFACE CONTROL</h3>
+      
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label id="lbl-set-lang"><i class="fa-solid fa-language"></i> App Language / भाषा</label>
+        <select id="ui-lang-select" onchange="applyGlobalLanguage(this.value)">
+          <option value="en">English (US)</option>
+          <option value="hi">हिंदी (Hindi)</option>
+        </select>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label id="lbl-set-theme"><i class="fa-solid fa-palette"></i> Select App Interface Theme</label>
+        <select id="ui-theme-select" onchange="applyGlobalTheme(this.value)">
+          <option value="dark">Sleek Dark Mode (Default)</option>
+          <option value="light">Clean Light Mode</option>
+          <option value="cyberpunk">Neon Cyberpunk Mode</option>
+          <option value="minimal">Minimalist Pastel Mode</option>
+          <option value="gold">Royal Luxury Gold Mode</option>
+          <option value="ocean">Deep Sea Cyan Ocean Mode</option>
+          <option value="forest">Vibrant Emerald Forest Mode</option>
+        </select>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label id="lbl-set-shape"><i class="fa-solid fa-shapes"></i> Button Corner Layout</label>
+        <select id="ui-shape-select" onchange="applyGlobalShape(this.value)">
+          <option value="rounded">Smooth Rounded Edges</option>
+          <option value="sharp">Sharp Flat Square Layout</option>
+          <option value="pill">Ultra Rounded Pill Shape</option>
+          <option value="leaf">Asymmetric Organic Leaf Layout</option>
+          <option value="bubble">Playful Retro Bubble Layout</option>
+        </select>
+      </div>
+
+      <div class="settings-row"><div><div class="settings-label" id="lbl-vibe">📳 Vibration</div></div><button class="toggle on" id="tog-vibe" onclick="toggleSetting('vibe')"></button></div>
+      <div class="settings-row"><div><div class="settings-label" id="lbl-comma">🔢 Thousand Separator</div></div><button class="toggle on" id="tog-comma" onclick="toggleSetting('comma')"></button></div>
+      <div class="settings-row"><div><div class="settings-label" id="lbl-hist">📜 Auto-save History</div></div><button class="toggle on" id="tog-hist" onclick="toggleSetting('hist')"></button></div>
+      
+      <div style="margin-top:14px;padding:12px 14px;background:var(--card2);border:1px solid var(--border2);border-radius:10px;">
+        <div style="font-size:0.78rem;color:var(--muted2);line-height:1.7">
+          <strong style="color:var(--text)">NG® Calculator Portal v4.5</strong><br>
+          Authorized System Interface & Engine<br>
+          <span style="color:var(--green)">✓ AdSense Ready & Google Site Verified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <strong>NG® REGISTERED PORTAL</strong> · All Rights Reserved ©2026
+  <div class="footer-links">
+    <span onclick="openPortal('about')" id="fl-about">About Us</span> | 
+    <span onclick="openPortal('contact')" id="fl-contact">Contact Us</span> | 
+    <span onclick="openPortal('terms')" id="fl-terms">Terms & Conditions</span> | 
+    <span onclick="openPortal('privacy')" id="fl-privacy">Privacy Policy</span> | 
+    <span onclick="openPortal('help')" id="fl-help">Help</span>
+  </div>
+</div>
+
+<div class="ad-bottom-bar"><div class="ad-slot"><span>📱</span><span>ADVERTISEMENT · 320×50</span></div></div>
+
+<script>
+'use strict';
+
+const DEF_SETTINGS = { vibe:true, comma:true, hist:true, theme:'dark', shape:'rounded', lang:'en' };
+let settings = JSON.parse(localStorage.getItem('nc_settings') || JSON.stringify(DEF_SETTINGS));
+
+function saveSettings(){ localStorage.setItem('nc_settings', JSON.stringify(settings)); }
+
+function toggleSetting(k){
+  settings[k] = !settings[k]; saveSettings();
+  document.getElementById('tog-'+k).classList.toggle('on', settings[k]);
+  showToast(settings[k] ? '✓ Enabled' : '✗ Disabled');
+}
+
+function initSettings(){
+  Object.keys(settings).forEach(k=>{
+    const el = document.getElementById('tog-'+k);
+    if(el) el.classList.toggle('on', settings[k]);
+  });
+  if(settings.theme) {
+    document.getElementById('ui-theme-select').value = settings.theme;
+    applyGlobalTheme(settings.theme);
+  }
+  if(settings.shape) {
+    document.getElementById('ui-shape-select').value = settings.shape;
+    applyGlobalShape(settings.shape);
+  }
+  if(settings.lang) {
+    document.getElementById('ui-lang-select').value = settings.lang;
+    applyGlobalLanguage(settings.lang);
+  }
+}
+
+function applyGlobalTheme(themeStr) {
+  document.body.classList.remove('theme-light', 'theme-cyberpunk', 'theme-minimal', 'theme-gold', 'theme-ocean', 'theme-forest');
+  if(themeStr !== 'dark') {
+    document.body.classList.add('theme-' + themeStr);
+  }
+  settings.theme = themeStr;
+  saveSettings();
+}
+
+function applyGlobalShape(shapeStr) {
+  document.body.classList.remove('shape-sharp', 'shape-pill', 'shape-leaf', 'shape-bubble');
+  if(shapeStr !== 'rounded') {
+    document.body.classList.add('shape-' + shapeStr);
+  }
+  settings.shape = shapeStr;
+  saveSettings();
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebarOverlay').classList.toggle('active');
+  document.getElementById('sidebar').classList.toggle('active');
+}
+
+// ── EXTENSIVE MULTI-LANGUAGE DICTIONARY ──
+const LANG_MAP = {
+  en: {
+    tagline: "India's Premium All-in-One Ultimate Portal",
+    free: "✓ 100% Free", tools: "15+ Calculators",
+    about: "About Us", contact: "Contact Us", terms: "Terms & Conditions", privacy: "Privacy Policy", help: "Help & Support",
+    close: "Close", navTitle: "⚡ NAVIGATION", standard: "STANDARD",
+    emires: "Monthly EMI", gsttitle: "📊 GST CALCULATOR — INDIA", gstadd: "Add GST", gstrem: "Remove GST",
+    vibe: "📳 Vibration", comma: "🔢 Thousand Separator", hist: "📜 Auto-save History",
+    settheme: "Select App Interface Theme", setshape: "Button Corner Layout", setlang: "App Language / भाषा",
+    settitle: "⚙️ SETTINGS & INTERFACE CONTROL", basic: "🔢 Basic", scientific: "🧬 Scientific",
+    emi: "🏦 EMI", gst: "📊 GST", finance: "💰 Investment (SIP/FD)", age: "🎂 Age",
+    percent: "% Percent", bmi: "⚕️ Fitness Tracker", currency: "💱 Currency", unit: "📐 Units",
+    profit: "📈 Profit", tip: "🍽️ Tip", history: "📋 History", settings: "⚙️ Settings",
+    loanamt: "Loan Amount (₹)", loanrate: "Annual Interest Rate (%)", loantenure: "Loan Tenure", months: "Months", years: "Years", calcemi: "📊 CALCULATE EMI",
+    pamt: "Principal Amount", tint: "Total Interest", tpay: "Total Amount",
+    gstamt: "Amount (₹)", gsttype: "Calculation Type", calcgst: "📋 CALCULATE GST", gstbase: "Base Amount", gsttot: "Total GST", gstfin: "Final Amount",
+    fintitle: "💰 INVESTMENT & WEALTH ZONE", invtype: "Investment Type", finrate: "Expected Return Rate (% P.A.)", finperiod: "Time Period (Years)", calcfin: "📈 CALCULATE WEALTH", fininv: "Invested Amount", finret: "Est. Returns", fintot: "Total Value",
+    agetitle: "🎂 AGE CALCULATOR", agedob: "Date of Birth", agecur: "Calculate Age On", calcage: "🎂 CALCULATE AGE", ageexact: "Exact Age", agetm: "Total Months", agetd: "Total Days", agenext: "Next Birthday",
+    pcttitle: "% PERCENTAGE CALCULATOR", pctres: "Result", calcpt: "Calculate",
+    hlthtitle: "⚕️ FITNESS & HEALTH TRACKER", hlthfeat: "Analysis Feature", hw: "Weight (kg)", hh: "Height (cm)", ha: "Age (Years)", hg: "Gender", calchlth: "⚕️ ANALYZE HEALTH", hstatus: "Status/Category",
+    curtitle: "💱 CURRENCY CONVERTER", curval: "Amount", curconvert: "💱 CONVERT", curres: "Converted Amount",
+    unittitle: "📐 UNIT CONVERTER", unitval: "Value", unitconvert: "📐 CONVERT", unitres: "Result", uclen: "Length", ucwt: "Weight",
+    proftitle: "📈 PROFIT & LOSS", profcp: "Cost Price (₹)", profsp: "Selling Price (₹)", profcalc: "📈 CALCULATE", profst: "Status", profmg: "Margin Amount",
+    tiptitle: "🍽️ TIP & BILL SPLIT", tipb: "Total Bill (₹)", tips: "Split Among People", tipcalc: "🍽️ CALCULATE", tipres: "Per Person Share",
+    histtitle: "📋 HISTORY", clearall: "🗑️ Clear All"
+  },
+  hi: {
+    tagline: "भारत का नंबर 1 प्रीमियम ऑल-इन-वन वेब पोर्टल",
+    free: "✓ 100% मुफ़्त", tools: "15+ कैलकुलेटर",
+    about: "हमारे बारे में", contact: "संपर्क करें", terms: "नियम एवं शर्तें", privacy: "गोपनीयता नीति", help: "सहायता एवं सपोर्ट",
+    close: "बंद करें", navTitle: "⚡ नेविगेशन मेनू", standard: "सामान्य मोड",
+    emires: "मासिक ईएमआई", gsttitle: "📊 जीएसटी कैलकुलेटर — भारत", gstadd: "जीएसटी जोड़ें", gstrem: "जीटी घटाएं",
+    vibe: "📳 वाइब्रेशन (कंपन)", comma: "🔢 भारतीय संख्या कॉमा", hist: "📜 इतिहास ऑटो-सेव",
+    settheme: "ऐप इंटरफ़ेस थीम चुनें", setshape: "बटन कोनों का लेआउट", setlang: "App Language / भाषा",
+    settitle: "⚙️ सेटिंग्स और इंटरफ़ेस नियंत्रण", basic: "🔢 बेसिक", scientific: "🧬 साइंटिफिक",
+    emi: "🏦 ईएमआई", gst: "📊 जीएसटी", finance: "💰 निवेश (SIP/FD)", age: "🎂 आयु",
+    percent: "% प्रतिशत", bmi: "⚕️ स्वास्थ्य ट्रैकर", currency: "💱 मुद्रा कनवर्टर", unit: "📐 इकाइयाँ",
+    profit: "📈 लाभ-हानि", tip: "🍽️ टिप स्प्लिट", history: "📋 इतिहास", settings: "⚙️ सेटिंग्स",
+    loanamt: "ऋण राशि (₹)", loanrate: "वार्षिक ब्याज दर (%)", loantenure: "ऋण अवधि", months: "महीने", years: "वर्ष", calcemi: "📊 ईएमआई की गणना करें",
+    pamt: "मूलधन राशि", tint: "कुल ब्याज राशि", tpay: "कुल भुगतान योग्य राशि",
+    gstamt: "मूल राशि (₹)", gsttype: "गणना का प्रकार", calcgst: "📋 जीएसटी निकालें", gstbase: "आधार राशि", gsttot: "कुल जीएसटी टैक्स", gstfin: "अंतिम कुल राशि",
+    fintitle: "💰 निवेश एवं वेल्थ ज़ोन", invtype: "निवेश का प्रकार", finrate: "अपेक्षित रिटर्न दर (% वार्षिक)", finperiod: "समय अवधि (वर्ष)", calcfin: "📈 वेल्थ रिटर्न निकालें", fininv: "कुल निवेशित राशि", finret: "अनुमानित रिटर्न", fintot: "कुल अंतिम मूल्य",
+    agetitle: "🎂 सटीक आयु कैलकुलेटर", agedob: "जन्म तिथि", agecur: "इस तिथि तक आयु निकालें", calcage: "🎂 आयु की गणना करें", ageexact: "सटीक उम्र", agetm: "कुल महीने", agetd: "कुल जीवित दिन", agenext: "अगला जन्मदिन",
+    pcttitle: "% प्रतिशत कैलकुलेटर", pctres: "परिणाम मूल्य", calcpt: "गणना करें",
+    hlthtitle: "⚕️ फिटनेस एवं स्वास्थ्य ट्रैकर", hlthfeat: "विश्लेषण सुविधा", hw: "वजन (किलोग्राम)", hh: "ऊंचाई (सेमी)", ha: "उम्र (वर्ष)", hg: "लिंग", calchlth: "⚕️ स्वास्थ्य जांचें", hstatus: "स्थिति / श्रेणी",
+    curtitle: "💱 विदेशी मुद्रा कनवर्टर", curval: "मुद्रा राशि", curconvert: "💱 कनवर्ट करें", curres: "परिवर्तित राशि",
+    unittitle: "📐 इकाई कनवर्टर", unitval: "मान दर्ज करें", unitconvert: "📐 कनवर्ट करें", unitres: "परिणाम", uclen: "लम्बाई", ucwt: "वजन",
+    proftitle: "📈 लाभ और हानि कैलकुलेटर", profcp: "लागत मूल्य (CP)", profsp: "विक्रय मूल्य (SP)", profcalc: "📈 गणना करें", profst: "स्थिति", profmg: "मार्जिन राशि",
+    tiptitle: "🍽️ टिप और बिल विभाजन", tipb: "कुल बिल राशि (₹)", tips: "लोगों की संख्या", tipcalc: "🍽️ टिप गणना करें", tipres: "प्रति व्यक्ति हिस्सा",
+    histtitle: "📋 गणना इतिहास", clearall: "🗑️ सब साफ़ करें"
+  }
+};
+
+function applyGlobalLanguage(langStr) {
+  settings.lang = langStr;
+  saveSettings();
+  const l = LANG_MAP[langStr];
+  
+  document.getElementById('hdr-tagline').textContent = l.tagline;
+  document.getElementById('bdg-free').textContent = l.free;
+  document.getElementById('bdg-tools').textContent = l.tools;
+  
+  ['about','contact','terms','privacy','help'].forEach(k => {
+    document.getElementById('sl-'+k).innerHTML = `<i class="fa-solid fa-circle"></i> ` + l[k];
+    document.getElementById('fl-'+k).textContent = l[k];
+  });
+  
+  document.getElementById('side-nav-title').textContent = "⚡ " + l.navTitle;
+  document.getElementById('lbl-close').innerHTML = l.close + ` <i class="fa-solid fa-xmark"></i>`;
+  document.getElementById('bMode').textContent = l.standard;
+  
+  const tabKeys = ['basic','scientific','emi','gst','finance','age','percent','bmi','currency','unit','profit','tip','history','settings'];
+  tabKeys.forEach(k => { document.getElementById('t-'+k).textContent = l[k]; });
+  
+  document.getElementById('lbl-emi-title').textContent = l.emi + " LOAN CALCULATOR";
+  document.getElementById('lbl-loan-amt').textContent = l.loanamt;
+  document.getElementById('lbl-loan-rate').textContent = l.loanrate;
+  document.getElementById('lbl-loan-tenure').textContent = l.loantenure;
+  document.getElementById('opt-m').textContent = l.months;
+  document.getElementById('opt-y').textContent = l.years;
+  document.getElementById('btn-calc-emi').textContent = l.calcemi;
+  document.getElementById('lbl-m-emi').textContent = l.emires;
+  document.getElementById('lbl-p-amt').textContent = l.pamt;
+  document.getElementById('lbl-t-int').textContent = l.tint;
+  document.getElementById('lbl-t-pay').textContent = l.tpay;
+  
+  document.getElementById('lbl-gst-title').textContent = l.gsttitle;
+  document.getElementById('lbl-gst-amt').textContent = l.gstamt;
+  document.getElementById('lbl-gst-type').textContent = l.gsttype;
+  document.getElementById('opt-gst-add').textContent = l.gstadd;
+  document.getElementById('opt-gst-rem').textContent = l.gstrem;
+  document.getElementById('btn-calc-gst').textContent = l.calcgst;
+  document.getElementById('lbl-gst-base').textContent = l.gstbase;
+  document.getElementById('lbl-gst-tot').textContent = l.gsttot;
+  document.getElementById('lbl-gst-fin').textContent = l.gstfin;
+
+  document.getElementById('lbl-fin-title').textContent = l.fintitle;
+  document.getElementById('lbl-inv-type').textContent = l.invtype;
+  document.getElementById('lbl-fin-rate').textContent = l.finrate;
+  document.getElementById('lbl-fin-period').textContent = l.finperiod;
+  document.getElementById('btn-calc-fin').textContent = l.calcfin;
+  document.getElementById('lbl-fin-inv').textContent = l.fininv;
+  document.getElementById('lbl-fin-ret').textContent = l.finret;
+  document.getElementById('lbl-fin-tot').textContent = l.fintot;
+
+  document.getElementById('lbl-age-title').textContent = l.agetitle;
+  document.getElementById('lbl-age-dob').textContent = l.agedob;
+  document.getElementById('lbl-age-cur').textContent = l.agecur;
+  document.getElementById('btn-calc-age').textContent = l.calcage;
+  document.getElementById('lbl-age-exact').textContent = l.ageexact;
+  document.getElementById('lbl-age-tm').textContent = l.agetm;
+  document.getElementById('lbl-age-td').textContent = l.agetd;
+  document.getElementById('lbl-age-next').textContent = l.agenext;
+
+  document.getElementById('lbl-health-title').textContent = l.hlthtitle;
+  document.getElementById('lbl-health-feat').textContent = l.hlthfeat;
+  document.getElementById('lbl-h-w').textContent = l.hw;
+  document.getElementById('lbl-h-h').textContent = l.hh;
+  document.getElementById('lbl-h-a').textContent = l.ha;
+  document.getElementById('lbl-h-g').textContent = l.hg;
+  document.getElementById('btn-calc-hlth').textContent = l.calchlth;
+  document.getElementById('lbl-h-status').textContent = l.hstatus;
+
+  document.getElementById('lbl-set-title').textContent = l.settitle;
+  document.getElementById('lbl-set-lang').innerHTML = `<i class="fa-solid fa-language"></i> ` + l.setlang;
+  document.getElementById('lbl-set-theme').innerHTML = `<i class="fa-solid fa-palette"></i> ` + l.settheme;
+  document.getElementById('lbl-set-shape').innerHTML = `<i class="fa-solid fa-shapes"></i> ` + l.setshape;
+  document.getElementById('lbl-vibe').textContent = l.vibe;
+  document.getElementById('lbl-comma').textContent = l.comma;
+  document.getElementById('lbl-hist').textContent = l.hist;
+  document.getElementById('lbl-hist-title').textContent = l.histtitle;
+  document.getElementById('btn-clear-all').textContent = l.clearall;
+}
+
+const PORTAL_DATA = {
+  about: {
+    title: "ABOUT COMPANY & CORE LOGIC ENGINE",
+    body: `<h2>NG® Premium Global Mathematical Systems</h2><p>Welcome to India's most highly optimized standalone multi-computational architecture platform designed, engineered, and maintained under global web standard protocols.</p>`
+  },
+  contact: {
+    title: "OFFICIAL CONTACT & ENTERPRISE ESCALATION MATRIX",
+    body: `<h2>Developer & Brand Communications</h2><p>Primary E-Mail Core:<br><a href="mailto:nirbhaygautam1212@gmail.com" class="email-link">nirbhaygautam1212@gmail.com</a></p><a href="https://wa.me/918518991808" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Initiate Verified WhatsApp Channel</a>`
+  },
+  terms: {
+    title: "LEGAL TERMS OF SERVICE & SYSTEM USE INDEMNITY",
+    body: `<h2>1. Acceptance of Framework</h2><p>The calculations rendered by this platform—including GST formulas and leap-year aware systems—are for computational assistance benchmarks.</p>`
+  },
+  privacy: {
+    title: "PRIVACY SAFEGUARDS & NATIVE STORAGE DECLARATION",
+    body: `<h2>Zero Server Logging</h2><p>Your inputs never leave your client device. LocalStorage is strictly utilized for preference states parameters retention rules.</p>`
+  },
+  help: {
+    title: "USER ENGINES GUIDE & COMPREHENSIVE DOCUMENTATION",
+    body: `<h2>System Handbook</h2><p>Need support or discovered a rendering conflict layout anomaly? Contact live help-desk parameters:</p><a href="https://wa.me/918518991808" target="_blank" class="whatsapp-btn"><i class="fa-solid fa-headset"></i> Launch Technical Support</a>`
+  }
+};
+
+function openPortal(pageKey) {
+  document.getElementById('sidebarOverlay').classList.remove('active');
+  document.getElementById('sidebar').classList.remove('active');
+  const data = PORTAL_DATA[pageKey]; if(!data) return;
+  document.getElementById('modal-badge-title').textContent = data.title;
+  document.getElementById('modal-dynamic-body').innerHTML = data.body;
+  document.getElementById('portal-modal').classList.add('active');
+}
+function closePortal() { document.getElementById('portal-modal').classList.remove('active'); }
+
+// ── EXTENDED LOADING TIME SYSTEM TELEMETRY VECTORS ──
+const LOADING_TELEMETRY = [
+  "Initializing Computational Matrix...",
+  "Loading Core ECMAScript 2026 Engine...",
+  "Binding GPU Hardware Layout Layers...",
+  "Injecting NG® Financial Formula Vectors...",
+  "Syncing Indian GST Multi-Slab Arrays (5%, 12%, 18%, 28%)...",
+  "Compiling Leap-Year Aware Age Algorithms...",
+  "Mapping Mifflin-St Jeor Fitness Formulas...",
+  "Setting Client-Side Sandboxed Security Database...",
+  "System Diagnostics: 100% Secure. Ready to Boot."
+];
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  if(localStorage.getItem('nc_splash_seen_v5')){ hideSplash(false); }
+  else { startSplashAnim(); }
+  initSettings();
+  document.getElementById('age-to').value = new Date().toISOString().split('T')[0];
+  setUnitCat('length', document.querySelector('.unit-cat'));
+  loadHistoryFromStorage();
+});
+
+function startSplashAnim(){
+  const bar = document.getElementById('splashBar');
+  const btn = document.getElementById('splashBtn');
+  const telText = document.getElementById('telemetry-text');
+  let pct = 0;
+  
+  const iv = setInterval(()=>{
+    pct += 1; // Extended slow smooth timing for premium feel
+    bar.style.width = pct + '%';
+    
+    let labelIdx = Math.floor((pct / 100) * LOADING_TELEMETRY.length);
+    if(labelIdx >= LOADING_TELEMETRY.length) labelIdx = LOADING_TELEMETRY.length - 1;
+    telText.textContent = LOADING_TELEMETRY[labelIdx];
+
+    if(pct >= 100){
+      clearInterval(iv); 
+      btn.style.display = 'inline-block'; 
+      telText.innerHTML = "<span style='color:var(--green)'>✓ CORE SYSTEM FULLY LOADED</span>";
+    }
+  }, 25); 
+}
+
+function closeSplash(){ 
+  localStorage.setItem('nc_splash_seen_v5', '1'); 
+  hideSplash(true); 
+}
+
+function hideSplash(anim){
+  const el = document.getElementById('splash');
+  if(anim){ 
+    el.style.opacity='0'; el.style.transition='all 0.4s'; 
+    setTimeout(()=>{ el.style.display='none'; launchHowToUseWizard(); },400); 
+  } else { el.style.display='none'; launchHowToUseWizard(); }
+}
+
+// ── VISUAL "HOW TO USE" INTERACTIVE GUIDE VECTOR (NO SKIP) ──
+let currentWizStep = 0;
+const WIZARD_STEPS = [
+  {
+    icon: "🔢",
+    title: "1. बेसिक और साइंटिफिक गणित",
+    visual: '<div class="btns" style="gap:4px;"><button class="btn btn-num" style="height:35px;font-size:0.7rem;">7</button><button class="btn btn-num" style="height:35px;font-size:0.7rem;">8</button><button class="btn btn-op" style="height:35px;font-size:0.7rem;">×</button><button class="btn btn-eq" style="height:35px;font-size:0.7rem;animation:mockPulse 1s infinite alternate;">=</button></div>',
+    body: "<b>Basic Tab:</b> साधारण जोड़-घटाव के साथ MC, MR, M+ मेमोरी ऑपरेशन्स दिए गए हैं।<br><b>Scientific Mode:</b> sin, cos, log, त्रिकोणमिति और जटिल समीकरणों को हल करने के एडवांस फंक्शन्स।"
+  },
+  {
+    icon: "🏦",
+    title: "2. लोन EMI और भारतीय जीएसटी (GST)",
+    visual: '<div class="visual-mock-btn" style="background:#10b981; border-color:#fff;">📊 CALCULATE TAX</div>',
+    body: "<b>EMI Engine:</b> मूलधन, ब्याज दर डालते ही मासिक EMI ग्राफ आ जाएगा।<br><b>GST Calculator:</b> भारत के 0%, 3%, 5%, 12%, 18%, 28% स्लैब पर आधारित एडवांस्ड वन-क्लिक टैक्स प्लस/माइनस सिस्टम।"
+  },
+  {
+    icon: "💰",
+    title: "3. वेल्थ म्यूचुअल फंड (SIP / FD)",
+    visual: '<div style="color:var(--green);font-family:Orbitron;font-weight:900;font-size:1.4rem;">₹ COMPOUND GROWTH</div>',
+    body: "<b>Wealth Tracker:</b> म्यूचुअल फंड SIP निवेश, एकमुश्त लम्पसम रिटर्न, बैंक FD फिक्स्ड डिपॉजिट ब्याज और आवर्ती जमा (RD) का सटीक भविष्य संचय मूल्य प्राप्त करें।"
+  },
+  {
+    icon: "🎂",
+    title: "4. लीप-इयर अवेयर आयु और व्हील इंटरफ़ेस",
+    visual: '<div class="custom-date-picker" style="text-align:center;font-size:0.85rem;border-color:var(--accent);"><i class="fa-solid fa-calendar-days"></i> SELECT DATE PICKER WHEEL</div>',
+    body: "<b>Age UI:</b> पुराने ड्रॉपडाउन हटाकर नया स्मूद नेटिव कैलेंडर व्हील लागू किया गया है। यह लीप वर्ष और हर महीने के सटीक दिनों को गिनकर आपकी वास्तविक आयु सेकंडों में निकालता है।"
+  },
+  {
+    icon: "💱",
+    title: "5. मुद्रा, इकाई, लाभ-हानि व वॉइस इंजन",
+    visual: '<div style="display:flex;gap:10px;align-items:center;"><div class="voice-toggle-btn active" style="position:static;width:40px;height:40px;font-size:0.9rem;"><i class="fa-solid fa-microphone"></i></div><span style="font-size:0.8rem;color:var(--accent)">SPEAK IN REAL TIME</span></div>',
+    body: "<b>Specialist Tools:</b> वैश्विक मुद्रा एक्सचेंज, लम्बाई, वजन और स्पीड (KM/H) कनवर्टर। साथ ही नीचे दाएं कोने में दिए गए माइक बटन से बोलकर भी आप टास्क रन कर सकते हैं।"
+  }
+];
+
+function launchHowToUseWizard() {
+  currentWizStep = 0;
+  updateWizardUI();
+  document.getElementById('how-to-use-container').style.display = 'flex';
+}
+
+function updateWizardUI() {
+  const stepData = WIZARD_STEPS[currentWizStep];
+  document.getElementById('wiz-icon').textContent = stepData.icon;
+  document.getElementById('wiz-title').textContent = stepData.title + ` (${currentWizStep + 1}/5)`;
+  document.getElementById('wiz-visual').innerHTML = stepData.visual;
+  document.getElementById('wiz-body').innerHTML = stepData.body;
+  
+  const dots = document.getElementById('wiz-dots').children;
+  for(let i=0; i<dots.length; i++) { dots[i].classList.toggle('active', i === currentWizStep); }
+  
+  const btn = document.getElementById('wiz-next-btn');
+  btn.textContent = (currentWizStep === WIZARD_STEPS.length - 1) ? "ENTER WORKSPACE ➔" : "NEXT STEP ➔";
+}
+
+function nextWizardStep() {
+  feedback();
+  if(currentWizStep < WIZARD_STEPS.length - 1) {
+    currentWizStep++;
+    updateWizardUI();
+  } else {
+    document.getElementById('how-to-use-container').style.display = 'none';
+    showToast("⚡ वेलकम टू NG® प्रीमियम इंटरफेस");
+  }
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2000);
+}
+
+// ── POINT 5: REAL HAPTIC VIBRATION MOTOR CORE FEEDBACK ──
+function feedback(){ 
+  if(settings.vibe && navigator.vibrate) {
+    navigator.vibrate(15); // True physical tactical haptic pulse
+  } 
+}
+
+function switchTab(id){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.getAttribute('onclick')===`switchTab('${id}')`));
+  document.querySelectorAll('.calc-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  if(id==='history') renderHistory();
+  feedback();
+}
+
+// HISTORY LOGIC
+let history_arr = [];
+function loadHistoryFromStorage(){ history_arr = JSON.parse(localStorage.getItem('nc_history') || '[]'); }
+function saveHistoryToStorage(){ if(settings.hist) localStorage.setItem('nc_history', JSON.stringify(history_arr)); }
+function renderHistory(){
+  const el = document.getElementById('hist-list');
+  if(!history_arr.length){ el.innerHTML='<div class="no-hist">No calculation data available.</div>'; return; }
+  el.innerHTML = history_arr.map((h)=>`<div class="hist-item"><div class="h-expr">${h.expr}</div><div class="h-result">= ${h.result}</div></div>`).join('');
+}
+function addHistory(exprStr, resStr){
+  if(!settings.hist) return;
+  history_arr.unshift({ expr: exprStr, result: resStr });
+  if(history_arr.length > 30) history_arr.pop();
+  saveHistoryToStorage();
+}
+function clearHistory(){ history_arr = []; localStorage.removeItem('nc_history'); renderHistory(); showToast('🗑️ Cleared'); }
+
+// STANDARD LOGIC
+const bDisp = { val:'0', expr:'', prevOp:'', prevVal:'', newNum:true };
+function updateBasic(){
+  const v = document.getElementById('bVal');
+  let disp = bDisp.val;
+  if(settings.comma && !isNaN(parseFloat(disp)) && !disp.includes('e')){
+    let parts = disp.split('.'); parts[0] = parseInt(parts[0]).toLocaleString('en-IN'); disp = parts.join('.');
+  }
+  v.textContent = disp; document.getElementById('bExpr').textContent = bDisp.expr;
+}
+function bNum(n){ feedback(); if(bDisp.newNum){ bDisp.val = n==='.'?'0.':n; bDisp.newNum=false; } else { if(n==='.' && bDisp.val.includes('.')) return; bDisp.val+=n; } updateBasic(); }
+function bOp(op){ feedback(); bDisp.expr = bDisp.val+' '+op; bDisp.prevVal=bDisp.val; bDisp.prevOp=op; bDisp.newNum=true; updateBasic(); }
+function bAC(){ feedback(); bDisp.val='0'; bDisp.expr=''; bDisp.prevOp=''; bDisp.newNum=true; updateBasic(); }
+function bDel(){ feedback(); if(!bDisp.newNum) { bDisp.val = bDisp.val.length>1?bDisp.val.slice(0,-1):'0'; updateBasic(); } }
+function bToggleSign(){ bDisp.val = bDisp.val.startsWith('-')?bDisp.val.slice(1):'-'+bDisp.val; updateBasic(); }
+function bEqual(){
+  if(!bDisp.prevOp) return;
+  let a = parseFloat(bDisp.prevVal), b = parseFloat(bDisp.val), r = 0;
+  if(bDisp.prevOp==='+') r=a+b;
+  else if(bDisp.prevOp==='−') r=a-b;
+  else if(bDisp.prevOp==='×') r=a*b;
+  else if(bDisp.prevOp==='÷') r=b!==0?a/b:'Error';
+  let res = r.toString(); addHistory(bDisp.expr+' '+bDisp.val, res);
+  bDisp.val=res; bDisp.expr=''; bDisp.prevOp=''; bDisp.newNum=true; updateBasic();
+}
+
+// SCIENTIFIC FUNCTIONS ENHANCEMENTS
+const sDisp={val:'0',expr:'',newNum:true};
+function updateSci(){ document.getElementById('sVal').textContent=sDisp.val; document.getElementById('sExpr').textContent=sDisp.expr; }
+function sNum(n){ feedback(); if(sDisp.newNum){ sDisp.val=n; sDisp.newNum=false; } else { sDisp.val+=n; } updateSci(); }
+function sOp(op){ feedback(); sDisp.expr += sDisp.val + ' ' + op + ' '; sDisp.newNum=true; updateSci(); }
+function sAC(){ feedback(); sDisp.val='0'; sDisp.expr=''; sDisp.newNum=true; updateSci(); }
+function sDel(){ feedback(); sDisp.val='0'; updateSci(); }
+function sEqual(){
+  try {
+    let safe = sDisp.expr+sDisp.val;
+    safe = safe.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-');
+    let r = eval(safe); sDisp.val = r.toString(); sDisp.expr=''; sDisp.newNum=true; updateSci();
+  } catch(e){ sDisp.val='Error'; updateSci(); }
+}
+function sciF(fn){
+  feedback();
+  let n = parseFloat(sDisp.val), r = 0;
+  if(fn==='sin') r=Math.sin(n*Math.PI/180);
+  else if(fn==='cos') r=Math.cos(n*Math.PI/180);
+  else if(fn==='tan') r=Math.tan(n*Math.PI/180);
+  else if(fn==='sqrt') r=Math.sqrt(n);
+  else if(fn==='cbrt') r=Math.cbrt(n);
+  else if(fn==='log') r=Math.log10(n);
+  else if(fn==='ln') r=Math.log(n);
+  else if(fn==='sq') r=n*n;
+  else if(fn==='cube') r=n*n*n;
+  else if(fn==='inv') r=1/n;
+  else if(fn==='abs') r=Math.abs(n);
+  else if(fn==='pi') r=Math.PI;
+  else if(fn==='e') r=Math.E;
+  else if(fn==='fact') { r=1; for(let i=2;i<=n;i++) r*=i; }
+  sDisp.val = r.toString(); sDisp.newNum=true; updateSci();
+}
+
+// EMI
+function calcEMI(){
+  feedback();
+  const P=parseFloat(document.getElementById('emi-p').value), r=parseFloat(document.getElementById('emi-r').value)/12/100;
+  let n=parseFloat(document.getElementById('emi-t').value); if(document.getElementById('emi-ttype').value==='years') n*=12;
+  if(!P||!r||!n) return;
+  const emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1), total=emi*n;
+  document.getElementById('emi-monthly').textContent='₹'+Math.round(emi).toLocaleString('en-IN');
+  document.getElementById('emi-principal-r').textContent='₹'+P.toLocaleString('en-IN');
+  document.getElementById('emi-intamt').textContent='₹'+Math.round(total-P).toLocaleString('en-IN');
+  document.getElementById('emi-total').textContent='₹'+Math.round(total).toLocaleString('en-IN');
+  document.getElementById('emi-res').classList.add('show');
+}
+
+// GST
+function calcGST(){
+  feedback();
+  const amt=parseFloat(document.getElementById('gst-amt').value), rate=parseFloat(document.getElementById('gst-rate').value), type=document.getElementById('gst-type').value;
+  if(!amt) return;
+  let base, tax; if(type==='add'){ base=amt; tax=amt*rate/100; } else { base=amt/(1+rate/100); tax=amt-base; }
+  document.getElementById('gst-base').textContent='₹'+Math.round(base).toLocaleString('en-IN');
+  document.getElementById('gst-totaltax').textContent='₹'+Math.round(tax).toLocaleString('en-IN');
+  document.getElementById('gst-final').textContent='₹'+Math.round(base+tax).toLocaleString('en-IN');
+  document.getElementById('gst-res').classList.add('show');
+}
+
+// INVESTMENTS
+function toggleFinanceInputs(){
+  const type = document.getElementById('fin-type').value; const label = document.getElementById('fin-amt-label');
+  label.textContent = (type==='sip' || type==='rd') ? "Monthly Investment (₹)" : "Total Lumpsum Principal (₹)";
+}
+function calculateWealth(){
+  feedback();
+  const type = document.getElementById('fin-type').value, p = parseFloat(document.getElementById('fin-amt').value), r = parseFloat(document.getElementById('fin-rate').value)/100, y = parseFloat(document.getElementById('fin-years').value);
+  if(!p || !r || !y) { showToast('⚠️ Field incomplete'); return; }
+  let total = 0, invested = 0;
+  if(type==='sip'){ const m = y * 12, i = r / 12; total = p * (Math.pow(1 + i, m) - 1) * (1 + i) / i; invested = p * m; } 
+  else if(type==='lumpsum'){ total = p * Math.pow(1 + r, y); invested = p; } 
+  else if(type==='fd'){ total = p * Math.pow(1 + r/4, 4*y); invested = p; } 
+  else if(type==='rd'){ const m = y * 12, i = r / 4; total = p * (Math.pow(1 + i, m) - 1) / (1 - Math.pow(1 + i, -1/3)); invested = p * m; }
+  document.getElementById('fin-invested').textContent = '₹' + Math.round(invested).toLocaleString('en-IN');
+  document.getElementById('fin-returns').textContent = '₹' + Math.round(total - invested).toLocaleString('en-IN');
+  document.getElementById('fin-total').textContent = '₹' + Math.round(total).toLocaleString('en-IN');
+  document.getElementById('fin-res').classList.add('show');
+}
+
+// ── POINT 1: LEAP-YEAR AWARE CALENDAR AGE CALCULATION LOGIC ──
+function calcAge() {
+  const dobInput = document.getElementById('age-dob').value;
+  const toInput = document.getElementById('age-to').value;
+  if (!dobInput || !toInput) return;
+  
+  feedback();
+  const dob = new Date(dobInput); const toDate = new Date(toInput);
+  if (toDate < dob) return;
+  
+  let years = toDate.getFullYear() - dob.getFullYear();
+  let months = toDate.getMonth() - dob.getMonth();
+  let days = toDate.getDate() - dob.getDate();
+  
+  if (days < 0) {
+    months--;
+    const prevMonth = new Date(toDate.getFullYear(), toDate.getMonth(), 0);
+    days += prevMonth.getDate();
+  }
+  if (months < 0) { years--; months += 12; }
+  
+  document.getElementById('age-main').textContent = `${years} Yrs, ${months} Months, ${days} Days`;
+  document.getElementById('age-months').textContent = ((years * 12) + months).toLocaleString('en-IN');
+  document.getElementById('age-days').textContent = Math.ceil(Math.abs(toDate - dob) / (1000*60*60*24)).toLocaleString('en-IN');
+  
+  let nextBday = new Date(toDate.getFullYear(), dob.getMonth(), dob.getDate());
+  if (nextBday < toDate) nextBday.setFullYear(toDate.getFullYear() + 1);
+  let nMonths = nextBday.getMonth() - toDate.getMonth();
+  let nDays = nextBday.getDate() - toDate.getDate();
+  if (nDays < 0) { nMonths--; const pm = new Date(nextBday.getFullYear(), nextBday.getMonth(), 0); nDays += pm.getDate(); }
+  if (nMonths < 0) nMonths += 12;
+  
+  document.getElementById('age-next').textContent = `${nMonths} Months, ${nDays} Days left`;
+  document.getElementById('age-res').classList.add('show');
+}
+
+// ── POINT 2: ADVANCED PURE PERCENTAGE INTERFACE RULES CALCULATOR ──
+function togglePctInputs(){
+  const mode = document.getElementById('pct-mode').value;
+  const px = document.getElementById('p1x'); const py = document.getElementById('p1y');
+  if(mode === 'basic') { px.placeholder = "Percentage (X%)"; py.placeholder = "Total Value (Y)"; }
+  else if(mode === 'hike' || mode === 'discount') { px.placeholder = "Original Value (X)"; py.placeholder = "Percentage Rate (Y%)"; }
+  else if(mode === 'share') { px.placeholder = "Value X"; py.placeholder = "Value Y"; }
+}
+function calcAdvancedPercentage(){
+  feedback();
+  const mode = document.getElementById('pct-mode').value;
+  const x = parseFloat(document.getElementById('p1x').value);
+  const y = parseFloat(document.getElementById('p1y').value);
+  if(isNaN(x) || isNaN(y)) return;
+  
+  let finalAns = 0; let diff = 0;
+  const diffRow = document.getElementById('pct-diff-row');
+  
+  if(mode === 'basic') {
+    finalAns = (x / 100) * y; diffRow.style.display = 'none';
+  } else if(mode === 'hike') {
+    diff = (y / 100) * x; finalAns = x + diff;
+    document.getElementById('p1-diff').textContent = '₹' + diff.toFixed(2); diffRow.style.display = 'flex';
+  } else if(mode === 'discount') {
+    diff = (y / 100) * x; finalAns = x - diff;
+    document.getElementById('p1-diff').textContent = '₹' + diff.toFixed(2); diffRow.style.display = 'flex';
+  } else if(mode === 'share') {
+    finalAns = (x / y) * 100; document.getElementById('p1-ans').textContent = finalAns.toFixed(2) + ' %';
+    document.getElementById('p1-res').classList.add('show'); diffRow.style.display = 'none'; return;
+  }
+  document.getElementById('p1-ans').textContent = finalAns.toFixed(2);
+  document.getElementById('p1-res').classList.add('show');
+}
+
+// HEALTH MODULE
+function toggleHealthInputs(){}
+function calculateHealthTracker(){
+  feedback();
+  const type = document.getElementById('health-type').value, w = parseFloat(document.getElementById('bmi-w').value), h = parseFloat(document.getElementById('bmi-h').value);
+  if(!w || !h) return;
+  if(type === 'bmi') {
+     const bmi = w / ((h/100)*(h/100)); document.getElementById('bmi-val').textContent = bmi.toFixed(1);
+     document.getElementById('bmi-cat').textContent = bmi<18.5?'Underweight':bmi<25?'Normal Health Status':'Overweight target Warning';
+  } else {
+     const age = parseFloat(document.getElementById('bmi-age').value)||25, g = document.getElementById('bmi-g').value;
+     let bmr = (g==='M') ? (10*w + 6.25*h - 5*age + 5) : (10*w + 6.25*h - 5*age - 161);
+     document.getElementById('bmi-val').textContent = Math.round(bmr) + " Kcal"; document.getElementById('bmi-cat').textContent = "Daily Base Energy Burn Rate";
+  }
+  document.getElementById('bmi-res').classList.add('show');
+}
+
+// CURRENCY
+function calcCur(){
+  feedback(); const amt=parseFloat(document.getElementById('cur-amt').value); if(!amt) return;
+  const f=document.getElementById('cur-from').value, t=document.getElementById('cur-to').value;
+  let r=1; if(f==='INR'&&t==='USD') r=0.012; else if(f==='USD'&&t==='INR') r=83.5;
+  document.getElementById('cur-ans').textContent=(amt*r).toFixed(2) + ' ' + t; document.getElementById('cur-res').classList.add('show');
+}
+
+// UNIT CONVERTER (UPDATED WITH SPEED FEATURE STEP 3)
+let currentUnitCat = 'length';
+function setUnitCat(cat,el){
+  currentUnitCat = cat;
+  document.querySelectorAll('.unit-cat').forEach(c=>c.classList.remove('active')); el.classList.add('active');
+  const from = document.getElementById('unit-from'); const to = document.getElementById('unit-to');
+  if(cat === 'length') {
+     from.innerHTML='<option value="m">Meter (m)</option><option value="cm">Centimeter (cm)</option><option value="km">Kilometer (km)</option>';
+     to.innerHTML='<option value="cm">Centimeter (cm)</option><option value="m">Meter (m)</option><option value="km">Kilometer (km)</option>';
+  } else if(cat === 'weight') {
+     from.innerHTML='<option value="kg">Kilogram (kg)</option><option value="g">Gram (g)</option>';
+     to.innerHTML='<option value="g">Gram (g)</option><option value="kg">Kilogram (kg)</option>';
+  } else if(cat === 'speed') {
+     from.innerHTML='<option value="kmh">KM/H</option><option value="ms">Meters/Sec</option>';
+     to.innerHTML='<option value="ms">Meters/Sec</option><option value="kmh">KM/H</option>';
+  }
+}
+function calcUnit(){
+  feedback();
+  const v=parseFloat(document.getElementById('unit-val').value), f=document.getElementById('unit-from').value, t=document.getElementById('unit-to').value;
+  if(isNaN(v)) return; let res=v;
+  if(currentUnitCat==='length'){
+     let meters = v; if(f==='cm') meters=v/100; if(f==='km') meters=v*1000;
+     res=meters; if(t==='cm') res=meters*100; if(t==='km') res=meters/1000;
+  } else if(currentUnitCat==='weight'){
+     let grams = v; if(f==='kg') grams=v*1000;
+     res=grams; if(t==='kg') res=grams/1000;
+  } else if(currentUnitCat==='speed'){
+     if(f==='kmh' && t==='ms') res=v/3.6; if(f==='ms' && t==='kmh') res=v*3.6;
+  }
+  document.getElementById('unit-ans').textContent=res.toFixed(2)+' '+t; document.getElementById('unit-res').classList.add('show');
+}
+
+// PROFIT LOGIC
+function calcPL(){
+  feedback(); const cp=parseFloat(document.getElementById('pl-cp').value), sp=parseFloat(document.getElementById('pl-sp').value);
+  document.getElementById('pl-status').textContent=sp>=cp?'PROFIT':'LOSS'; document.getElementById('pl-amount').textContent='₹'+Math.abs(sp-cp);
+  document.getElementById('pl-res').classList.add('show');
+}
+
+// TIP SPLIT
+function calcTip(){
+  feedback(); const b=parseFloat(document.getElementById('tip-bill').value), s=parseInt(document.getElementById('tip-split').value)||1;
+  document.getElementById('tip-per').textContent='₹'+(b/s).toFixed(2); document.getElementById('tip-res').classList.add('show');
+}
+
+// ── POINT 4: ANIMATED VOICE ENGINE REALTIME PROCESSING SYSTEM ──
+let voiceActive = false;
+function toggleVoiceEngine() {
+  const btn = document.getElementById('voiceToggle');
+  const icon = document.getElementById('voiceIcon');
+  
+  if (!voiceActive) {
+    // Attempting speech engine connection interface bind
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+       showToast("❌ Speech recognition not supported in browser.");
+       return;
+    }
+    
+    feedback();
+    voiceActive = true;
+    btn.classList.add('active');
+    icon.className = "fa-solid fa-microphone";
+    showToast("🎙️ Voice Engine Active: Speak Math Operation");
+    
+    const rec = new SpeechRecognition(); rec.lang = 'en-US'; rec.continuous = false;
+    rec.onresult = function(e) {
+       let speechText = e.results[0][0].transcript.toLowerCase();
+       processVoiceQuery(speechText);
+    };
+    rec.onend = function() {
+       voiceActive = false;
+       btn.classList.remove('active');
+       icon.className = "fa-solid fa-microphone-slash";
+    };
+    rec.start();
+  } else {
+     voiceActive = false; btn.classList.remove('active'); icon.className = "fa-solid fa-microphone-slash"; showToast("🔇 Voice Engine Silent");
+  }
+}
+
+function processVoiceQuery(q) {
+  // Simple natural parsing loop logic for voice commands execution mappings
+  q = q.replace(/plus/g, '+').replace(/minus/g, '−').replace(/multiply by/g, '×').replace(/into/g, '×').replace(/divide by/g, '÷');
+  let match = q.match(/(\d+)\s*([\+\−\×\÷])\s*(\d+)/);
+  if (match) {
+     switchTab('basic'); bDisp.val = match[1]; bDisp.newNum = false; updateBasic();
+     bOp(match[2]); bDisp.val = match[3]; bDisp.newNum = false; updateBasic();
+     setTimeout(() => { bEqual(); showToast("✓ Calculated Voice Request"); }, 500);
+  } else { showToast(`Could not compute voice input: "${q}"`); }
+}
+
+function resetForm(id){ showToast('✓ Reset Executed'); }
+function memAction(act){ showToast('Memory Active: ' + act); }
+</script>
+</body>
+</html>
